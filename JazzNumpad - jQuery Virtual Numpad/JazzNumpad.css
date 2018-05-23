@@ -1,0 +1,41 @@
+button{
+  margin:3px;
+}
+button{
+ display: inline-block;
+ border:1px solid #FF0A0A;
+ color: #FF0000;
+ border-radius: 30px;
+ -webkit-border-radius: 30px;
+ -moz-border-radius: 30px;
+ font-family: Verdana;
+ width: auto;
+ height: auto;
+ font-size: 16px;
+ padding: 10px 17px;
+ background-color: #FCFAF9;
+}
+button:hover, button:active{
+ border:1px solid #FFFFFF;
+ color: #FFFDFC;
+ background-color: #FC0000;
+ cursor: pointer;
+}
+
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(250, 0, 0, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(250, 0, 0, 1);
+}
