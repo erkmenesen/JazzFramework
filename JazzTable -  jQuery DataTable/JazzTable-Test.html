@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="JazzTable.js" type="text/javascript"></script>
+    <link href="JazzTable.css" rel="stylesheet" />
+    <script type="text/javascript">
+        var Product = function (cid, id, name, price, no) {
+            this.CategoryId = cid;
+            this.ProductId = id;
+            this.Name = name;
+            this.Price = price;
+            this.ProductNo = no;
+        }
+
+        //Category sınıfımız için sıralama yapılabilmesi için CompareTo fonksiyonunu iplement ettik
+        //ve hangi property e göre sıralama yapılacağını belirledik
+        var Category = function (id, name) {
+            this.CategoryId = id;
+            this.Name = name;
+
+            this.CompareTo = function (obj) {
+                return this.Name.CompareTo(obj.Name);
+            }
+        }
+
+        window.onload = function () {
+            var pList = new List();
+            var cList = new List();
+
+            var c1 = new Category(1, "Elektronik");
+            var c2 = new Category(2, "Beyaz Eşya");
+            var c3 = new Category(3, "Mobilya");
+            var c4 = new Category(4, "Tekstil");
+            var c5 = new Category(5, "Temizlik");
+
+            cList.AddRange([c5, c4, c2, c1, c3]);
+
+            var p1 = new Product(1, 1, "TV", 500, "TV-123");
+            var p2 = new Product(1, 2, "Teyp", 1500, "T-65");
+            var p3 = new Product(1, 3, "Bilgisayar", 2500, "PC-123");
+            var p4 = new Product(2, 4, "Buzdolabı", 510, "BSH-A1");
+            var p5 = new Product(2, 5, "Çamaşır Makinesi", 3500, "CM-12");
+            var p6 = new Product(3, 6, "Masa", 550, "ML-T65");
+            var p7 = new Product(3, 7, "Sandalye", 600, "SG-12");
+            var p8 = new Product(3, 8, "Büfe", 900, "BF-123");
+            var p9 = new Product(3, 9, "Kitaplık", 450, "KTP-123");
+            var p10 = new Product(4, 10, "Perde", 1200, "PD-123");
+            var p11 = new Product(4, 11, "Halı", 516, "HL-123");
+            var p12 = new Product(5, 12, "Deterjan", 980, "DTJ-123");
+            var p13 = new Product(6, 13, "Tavla", 30, "TV-11T4");
+            var p14 = new Product(6, 14, "Kapı Kolu", 25, "KKL-T-1");
+
+            pList.AddRange([p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14]);
+
+            var pList2 = new List(
+                [
+                    { Id: 1, Image: "images/r.png", Name: 'TV', Price: 1500, Warranty: 3, WebSite: "http://www.google.com", SecondEdition: true },
+                    { Id: 2, Image: "images/r.png", Name: 'Buzdolabı', Price: 1600, Warranty: 3, WebSite: "http://www.kodkek.com", SecondEdition: false },
+                    { Id: 3, Image: "images/r.png", Name: 'Çamaşır Makinesi', Price: 1700, Warranty: 7, WebSite: "http://www.yaldex.com", SecondEdition: true },
+                    { Id: 4, Image: "images/r.png", Name: 'Bulaşık Makinesi', Price: 1800, Warranty: 3, WebSite: "http://www.milliyet.com", SecondEdition: true },
+                    { Id: 5, Image: "images/r.png", Name: 'Bilgisayar', Price: 1500, Warranty: 10, WebSite: "http://www.hurriyet.com", SecondEdition: false },
+                    { Id: 6, Image: "images/r.png", Name: 'Müzik Seti', Price: 1600, Warranty: 3, WebSite: "http://www.hotmail.com", SecondEdition: false },
+                    { Id: 7, Image: "images/r.png", Name: 'Cep Telefonu', Price: 1700, Warranty: 3, WebSite: "http://www.msn.com", SecondEdition: true },
+                    { Id: 8, Image: "images/r.png", Name: 'Tablet PC', Price: 1800, Warranty: 10, WebSite: "http://www.outlook.com", SecondEdition: false },
+                    { Id: 9, Image: "images/r.png", Name: 'Masaj Aleti', Price: 1500, Warranty: 7, WebSite: "http://www.neticaret.com", SecondEdition: false },
+                    { Id: 10, Image: "images/r.png", Name: 'Ocak', Price: 1600, Warranty: 1, WebSite: "http://www.netahsilat.com", SecondEdition: true },
+                    { Id: 11, Image: "images/r.png", Name: 'Kombi', Price: 1700, Warranty: 3, WebSite: "http://www.ecozum.com", SecondEdition: true },
+                    { Id: 12, Image: "images/r.png", Name: 'ABC', Price: 1700, Warranty: 3, WebSite: "http://www.asus.com", SecondEdition: false },
+                    { Id: 13, Image: "images/r.png", Name: 'Cep Telefonu', Price: 1700, Warranty: 3, WebSite: "http://www.vatanbilgisayar.com", SecondEdition: true },
+                    { Id: 14, Image: "images/r.png", Name: 'Tablet PC', Price: 1800, Warranty: 10, WebSite: "http://www.mediamarkt.com", SecondEdition: false },
+                    { Id: 15, Image: "images/r.png", Name: 'Masaj Aleti', Price: 1500, Warranty: 7, WebSite: "http://www.bimex.com", SecondEdition: true },
+                    { Id: 16, Image: "images/r.png", Name: 'Ocak', Price: 1600, Warranty: 1, WebSite: "http://www.darty.com", SecondEdition: true },
+                    { Id: 17, Image: "images/r.png", Name: 'Kombi', Price: 1700, Warranty: 3, WebSite: "http://www.diasa.com", SecondEdition: false },
+                    { Id: 18, Image: "images/r.png", Name: 'ABC', Price: 1700, Warranty: 3, WebSite: "http://www.akbank.com", SecondEdition: true }
+                ]);
+
+            var warranties = [{ value: 1, text: "Bir" }, { value: 3, text: "Üç" }, { value: 7, text: "Yedi" }, { value: 10, text: "On" }];
+
+            $('.a').JazzTable({
+                AutoGenerateHeader: true,
+                Culture: 'tr',
+                Edit: EditType.Batch,
+                DataSource: {
+                    sourceType: 'json',
+                    source: pList2.ToArray()
+                },
+                Columns: [
+                    {
+                        title: 'Id',
+                        name: 'Id',
+                        type: Types.Number,
+                        rule: DataRole.Numeric,
+                        sortable: true,
+                        align: Align.Center,
+                        width: 30,
+                    },
+                    {
+                        title: "Resim",
+                        name: "Image",
+                        type: Types.String,
+                        role: DataRole.Image,
+                        align: Align.Center,
+                        width: 100
+                    },
+                    {
+                        title: 'Adı',
+                        name: 'Name',
+                        edit: true,
+                        type: Types.String,
+                        sortable: true,
+                        searchable: { criteria: SearchCriteria.Contains },
+                        role: DataRole.Text,
+                        validate: function (val) {
+                            return val !== "";
+                        },
+                        width: 150,
+                    },
+                    {
+                        title: 'Fiyatı',
+                        name: 'Price',
+                        edit: true,
+                        type: Types.Number,
+                        searchable: { criteria: SearchCriteria.LessAndEqual },
+                        sortable: true,
+                        role: DataRole.Currency,
+                        validate: function (val) {
+                            return !isNaN(val) && val > 0;
+                        },
+                        align: Align.Center,
+                        width: 100,
+                    },
+                    {
+                        title: "Garanti",
+                        name: "Warranty",
+                        type: Types.Number,
+                        edit: true,
+                        sortable: true,
+                        searchable: { criteria: SearchCriteria.Greater },
+                        role: DataRole.DropDown,
+                        editOptions: {//!!!IF ROLE DROP DOWN REQUIRED
+                            source: warranties,
+                            sourceType: "json"
+                        },
+                        validate: function (val) {
+                            return val > 0;
+                        },
+                        align: Align.Center,
+                        width: 70,
+                    },
+                    {
+                        title: "Site",
+                        name: "WebSite",
+                        type: Types.String,
+                        edit: true,
+                        role: DataRole.Link,
+                        searchable: { criteria: SearchCriteria.Contains },
+                        sortable: true,
+                        align: Align.Left,
+                        width: 180
+                    },
+                    {
+                        title: "2. El",
+                        name: "SecondEdition",
+                        type: "boolean",
+                        edit: true,
+                        role: DataRole.TrueFalse,
+                        sortable: false,
+                        align: Align.Center,
+                        width: 70,
+                    }
+                ],
+                Scrollable: 200,
+                Aggregate: [
+                        { fieldName: "Price", aggregate: Aggregate.Sum },
+                        { fieldName: "SecondEdition", aggregate: Aggregate.Count },
+                ],
+                Header: {
+                    ShowSearch: true,
+                    Crud: true
+                },
+                RowVersion: true,
+                Undo: {
+                    OnCreated: function (e) {
+
+                    },
+                    OnUndo: function (e) {
+
+                    }
+                },
+                SelectBox: true,
+                DeleteBox: true,
+                Pager: {
+                    RowsPerPage: [5, 10, 20, 30, 40, 50, 80, 100],
+                    DisplayPagerMaxCount: 6,
+                    ShowResultCount: true,
+                    PageChanged: function (e) {
+                        //alert("sayfa değiştirildi");
+                        //e.OldPage, e.NewPage
+                    }
+                },
+                CellEditing: function (e) {
+                    e.Cancel = false;
+                    
+                    //e.New, e.Old, e.Col, e.IsCancel
+                },
+                CellEdited: function (e) {
+                    
+                },
+                RowAdded: function (e) {
+
+                },
+                RowDeleting: function (e) {
+
+                },
+                RowDeleted: function (e) {
+
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="a">
+    </div>
+   
+</body>
+</html>

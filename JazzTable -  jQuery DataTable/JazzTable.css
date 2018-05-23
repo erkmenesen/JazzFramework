@@ -1,0 +1,263 @@
+﻿.e-pg-table
+{
+	font-size: 12px;
+	font-family: Arial;
+}
+
+.t-h-container
+{
+	border: solid 1px #dbdbdb;
+}
+
+	.t-h-container thead th
+	{
+		border-right: solid 1px #dbdbdb;
+	}
+
+.t-b-container
+{
+	border-bottom: solid 1px #dbdbdb;
+	border-left: solid 1px #dbdbdb;
+	border-right: solid 1px #dbdbdb;
+}
+
+	.t-b-container tbody td
+	{
+		border-right: solid 1px #dbdbdb;
+	}
+
+	.t-b-container tbody > tr:nth-child(odd) > td
+	{
+		background-color: #eaeaea;
+	}
+
+.t-f-container
+{
+	border: solid 1px #dbdbdb;
+}
+
+	.t-f-container tfoot td:not(:empty)
+	{
+		border-left: solid 1px #dbdbdb;
+		border-right: solid 1px #dbdbdb;
+	}
+
+.t-hs-searchoption, .t-hs-txtsearch
+{
+	padding: 3px;
+}
+
+.t-hu-container div
+{
+	margin-right: -8px;
+}
+
+.perrowpager
+{
+	margin-right: -2px;
+	float: right;
+	padding: 3px;
+}
+
+.invalid
+{
+	border:1px Red solid;
+}
+
+/*---------------------------------------ICON START------------------------------------*/
+.middle-icon
+{
+	width: 24px;
+	height: 24px;
+}
+
+.small-icon
+{
+	width: 16px;
+	height: 16px;
+}
+
+.big-icon
+{
+	width: 32px;
+	height: 32px;
+}
+
+.undo-empty
+{
+	background: url(images/trash-can-icon-green.png) no-repeat;
+}
+
+.undo-full
+{
+	background: url(images/trash-can-icon-red.png) no-repeat;
+}
+
+.undo-recycle
+{
+	background: url(images/recycle-icon.png) no-repeat;
+}
+
+.first-icon
+{
+	background: url(images/first-icon-n.png) no-repeat;
+}
+
+	.first-icon:hover
+	{
+		background: url(images/first-icon.png) no-repeat;
+	}
+
+.prev-icon
+{
+	background: url(images/prev-icon-n.png) no-repeat;
+}
+
+	.prev-icon:hover
+	{
+		background: url(images/prev-icon.png) no-repeat;
+	}
+
+.next-icon
+{
+	background: url(images/next-icon-n.png) no-repeat;
+}
+
+	.next-icon:hover
+	{
+		background: url(images/next-icon.png) no-repeat;
+	}
+
+.last-icon
+{
+	background: url(images/last-icon-n.png) no-repeat;
+}
+
+	.last-icon:hover
+	{
+		background: url(images/last-icon.png) no-repeat;
+	}
+
+.page-icon
+{
+	background: url(images/circle-icon.png) no-repeat;
+}
+
+.page-active-icon
+{
+	background: url(images/circle-icon-active.png) no-repeat;
+}
+
+.delete-icon
+{
+	opacity: 0.3;
+	background: url(images/delete-icon.png) no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+	.delete-icon:hover
+	{
+		opacity: 1;
+	}
+
+.sort-asc
+{
+	background: url(images/sort_asc.png) no-repeat;
+}
+
+.sort-desc
+{
+	background: url(images/sort_desc.png) no-repeat;
+}
+
+.sort-both
+{
+	background: url(images/sort_both.png) no-repeat;
+}
+
+.edit-both
+{
+	background: url(images/edit-both.png) no-repeat;
+}
+
+.edit-cancel
+{
+	background: url(images/edit-cancel.png) no-repeat;
+}
+
+.edit-ok
+{
+	background: url(images/edit-ok.png) no-repeat;
+}
+/*---------------------------------------ICON END------------------------------------*/
+
+.t-hu-info
+{
+	margin-left: 60%;
+	font-size: 12px;
+	font-family: Arial;
+	color: orangered;
+}
+
+.t-hu-container
+{
+	padding-top: 5px;
+}
+
+	.t-hu-container > a
+	{
+		float: right;
+	}
+
+.e-pg-header > div
+{
+	float: left;
+}
+
+.clearfix
+{
+	clear: both;
+}
+
+/*-------------------------------------PAGER START---------------------------------------*/
+
+.page div > span
+{
+	margin-top: 1px;
+}
+
+.page div
+{
+	padding-top: 3px;
+	height: 21px;
+	text-align: center;
+	font-weight: bold;
+	font: 12px Helvetica,sans-serif;
+	color: white;
+}
+
+.page > a
+{
+	text-decoration: none;
+}
+
+.e-pager
+{
+	margin-left: -40px;
+	margin-top: -15px;
+}
+
+	.e-pager > li
+	{
+		display: block;
+		float: left;
+		margin-left: 3px;
+		
+		padding: 1px;
+	}
+
+		.e-pager > li:first-child
+		{
+			margin-left: 0px;
+		}
